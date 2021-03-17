@@ -1,0 +1,77 @@
+{
+  "userId": "userId",
+  "documentNumber": "documentNumber",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "email": "email",
+  "phoneNumber": "123123123",
+  "companyName": "Company Name",
+  "session": {
+    "device": "device",
+    "deviceOS": "OS",
+    "deviceId": "deviceId",
+    "appVersion": "appVersion"
+  },
+  "salary": 10000,
+  "bank": {
+    "accountNumber": "accountNumber",
+    "name": "Bank of America"
+  },
+  "withdrawals": [
+    {
+      "type": "NORMAL",
+      "amount": 10,
+      "status": "status",
+      "createdAt": "date",
+      "paidAt": "date"
+    },
+    {
+      "type": "NORMAL",
+      "amount": 20,
+      "status": "status",
+      "createdAt": "date",
+      "paidAt": "date"
+    },
+    {
+      "type": "NORMAL",
+      "amount": 40,
+      "status": "status",
+      "createdAt": "date",
+      "paidAt": "date"
+    },
+    {
+      "type": "NORMAL",
+      "amount": 100,
+      "status": "status",
+      "createdAt": "date",
+      "paidAt": "date"
+    }
+  ],
+  "advance": {
+    "amount": 5,
+    "day": 4,
+    "withdrawals": [
+      {
+        "type": "ADVANCE",
+        "amount": 3,
+        "tobePaidAt": "date",
+        "paidAt": "date",
+        "status": "status"
+      },
+      {
+        "type": "ADVANCE",
+        "amount": 20,
+        "tobePaidAt": "date",
+        "paidAt": "date",
+        "status": "status"
+      },
+      {
+        "type": "ADVANCE",
+        "amount": 80,
+        "tobePaidAt": "date",
+        "paidAt": "date",
+        "status": "status"
+      }
+    ]
+  }
+}

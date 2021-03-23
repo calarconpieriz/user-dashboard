@@ -1,5 +1,5 @@
 import { FetchUserAccountSuccessResponse } from '../entities/UserAccount';
 
-export interface IUserAccountRepository {
+export interface UserAccountRepository {
   getUserAccount(): Promise<FetchUserAccountSuccessResponse>;
 }

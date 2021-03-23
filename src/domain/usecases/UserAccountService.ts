@@ -1,14 +1,12 @@
 import { FetchUserAccountSuccessResponse } from '../entities/UserAccount';
-import { UserAccountRepository } from '../../data/repositories/UserAccountRepository';
+import { UserAccountRepository } from '../repositories/UserAccountRepository';
+export class UserAccountService implements UserAccountRepository {
+  constructor(private userAccountRepository: UserAccountRepository) {}
 
-export interface IUserAccountService {
-  getUserAccount(): Promise<FetchUserAccountSuccessResponse>;
-}
-
-export class UserAccountService implements IUserAccountService {
-  constructor(private userAccountRepo: UserAccountRepository) {}
-
-  async getUserAccount(): Promise<FetchUserAccountSuccessResponse> {
-    return this.userAccountRepo.getUserAccount();
+  public async getUserAccount(): Promise<FetchUserAccountSuccessResponse> {
+    const response = await this.userAccountRepository.getUserAccount();
+    return {
+      ...response,
+    };
   }
 }

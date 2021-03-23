@@ -4,16 +4,6 @@ import { UserAccountRepository } from '../../domain/repositories/UserAccountRepo
 
 export class UserAccountApi implements UserAccountRepository {
   url = '/';
-
-  // async getUserAccount(): Promise<FetchUserAccountSuccessResponse> {
-  //   try {
-  //     const res = await fetch(this.url);
-  //     const jsonData: FetchUserAccountSuccessResponse = await res.json();
-  //     return jsonData;
-  //   } catch (error) {
-  //     throw new Error(error);
-  //   }
-  // }
   async getUserAccount(): Promise<FetchUserAccountSuccessResponse> {
     try {
       const res = await axios.get(this.url);

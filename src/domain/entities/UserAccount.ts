@@ -8,9 +8,10 @@ interface Session {
 interface Bank {
   accountNumber: string;
   name: string;
+  balance: string;
 }
 
-interface Withdrawal {
+export interface Withdrawal {
   type: string;
   amount: number;
   status: string;
@@ -18,10 +19,25 @@ interface Withdrawal {
   paidAt: Date;
 }
 
-interface Advance {
+export interface Advance {
   amount: number;
   day: number;
   withdrawals: Withdrawal[];
+}
+
+export interface UserAccountStructure {
+  userId: string;
+  documentNumber: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: string;
+  companyName: string;
+  session?: Session;
+  salary: number;
+  bank?: Bank;
+  withdrawals?: Withdrawal[];
+  advances?: Advance[];
 }
 
 export class UserAccount {

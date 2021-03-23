@@ -9,27 +9,27 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { Typography } from '@material-ui/core';
-import { Withdrawal } from '../../../../domain/entities/UserAccount';
+import { Advance } from '../../../../domain/entities/UserAccount';
 
 const StyledTable = styled(Table)`
   width: 100%;
 `;
 
-const TransactionsWrapper = styled.div`
+const AdvancesWrapper = styled.div`
   margin-top: 10px;
   width: 100%;
 `;
 
 interface Props {
-  withdrawals: Withdrawal[];
+  advances: Advance;
 }
 
-const Transactions = ({ withdrawals }: Props) => {
+const Advances = ({ advances }: Props) => {
   return (
-    <TransactionsWrapper>
+    <AdvancesWrapper>
       <CardItem>
         <Typography variant="h5" component="h2">
-          Latest Withdrawals
+          Latest Advances
         </Typography>
         <TableContainer component={Paper}>
           <StyledTable aria-label="simple table">
@@ -37,19 +37,19 @@ const Transactions = ({ withdrawals }: Props) => {
               <TableRow>
                 <TableCell>Type</TableCell>
                 <TableCell align="right">Amount</TableCell>
-                <TableCell align="right">Created at</TableCell>
+                <TableCell align="right">To be paid at</TableCell>
                 <TableCell align="right">Paid at</TableCell>
                 <TableCell align="right">Status</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {withdrawals.map(withdrawal => (
+              {advances.withdrawals.map(withdrawal => (
                 <TableRow key={withdrawal.amount}>
                   <TableCell component="th" scope="row">
                     {withdrawal.type}
                   </TableCell>
                   <TableCell align="right">{withdrawal.amount}</TableCell>
-                  <TableCell align="right">{withdrawal.createdAt}</TableCell>
+                  <TableCell align="right">{withdrawal.tobePaidAt}</TableCell>
                   <TableCell align="right">{withdrawal.paidAt}</TableCell>
                   <TableCell align="right">{withdrawal.status}</TableCell>
                 </TableRow>
@@ -58,8 +58,8 @@ const Transactions = ({ withdrawals }: Props) => {
           </StyledTable>
         </TableContainer>
       </CardItem>
-    </TransactionsWrapper>
+    </AdvancesWrapper>
   );
 };
 
-export default Transactions;
+export default Advances;

@@ -24,7 +24,11 @@ const initialState: State = {
     salary: 0,
     bank: undefined,
     withdrawals: [],
-    advances: [],
+    advances: {
+      amount: 0,
+      day: 1,
+      withdrawals: [],
+    },
   },
 };
 

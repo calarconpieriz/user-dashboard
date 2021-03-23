@@ -53,7 +53,7 @@ const data = {
       "paidAt": "2021-03-23"
     }
   ],
-  "advance": {
+  "advances": {
     "amount": 500,
     "day": 4,
     "withdrawals": [

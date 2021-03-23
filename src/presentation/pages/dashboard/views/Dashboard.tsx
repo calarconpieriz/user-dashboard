@@ -4,7 +4,7 @@ import Divider from '@material-ui/core/Divider';
 import { connect } from 'react-redux';
 import { fetchData } from '../store/dashboard.actions';
 // Components
-import { Account, Profile, Transactions } from '../components';
+import { Account, Profile, Transactions, Advances } from '../components';
 import { State as DashboardState } from '../store/dashboard.reducers';
 import { LinearProgress } from '@material-ui/core';
 interface Props {
@@ -29,8 +29,7 @@ const Dashboard = ({ state, fetchData }: Props): any => {
     fetchData();
   }, [fetchData]);
   const { userAccount, loading } = state;
-  const { withdrawals } = userAccount;
-  console.log(userAccount);
+  const { withdrawals, advances } = userAccount;
   const progressBar = () => {
     return (
       <ProgressBarContainer>
@@ -45,6 +44,7 @@ const Dashboard = ({ state, fetchData }: Props): any => {
         <Account userAccount={userAccount} />
         <Divider />
         <Transactions withdrawals={withdrawals} />
+        <Advances advances={advances} />
       </DashboardContainer>
     );
   };

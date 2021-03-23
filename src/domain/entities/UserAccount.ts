@@ -17,6 +17,7 @@ export interface Withdrawal {
   status: string;
   createdAt: Date;
   paidAt: Date;
+  tobePaidAt?: Date;
 }
 
 export interface Advance {
@@ -36,8 +37,8 @@ export interface UserAccountStructure {
   session?: Session;
   salary: number;
   bank?: Bank;
-  withdrawals?: Withdrawal[];
-  advances?: Advance[];
+  withdrawals: Withdrawal[];
+  advances: Advance;
 }
 
 export class UserAccount {

@@ -2,7 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { setup } from './api/fakeHttpApi'
 import reportWebVitals from './reportWebVitals';
+
+setup()
 
 ReactDOM.render(
   <React.StrictMode>

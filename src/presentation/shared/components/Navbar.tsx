@@ -79,6 +79,7 @@ export default function SearchAppBar() {
               width="100"
             />
           </Typography>
+          <strong>My Account</strong>
         </Toolbar>
       </AppBar>
     </div>

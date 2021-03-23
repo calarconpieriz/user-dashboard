@@ -17,7 +17,7 @@ const StyledTable = styled(Table)`
 
 const AdvancesWrapper = styled.div`
   margin-top: 10px;
-  width: 100%;
+  width: 98%;
 `;
 
 interface Props {

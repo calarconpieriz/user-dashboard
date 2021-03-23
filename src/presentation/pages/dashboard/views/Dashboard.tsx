@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import Divider from '@material-ui/core/Divider';
 import { connect } from 'react-redux';
 import { fetchData } from '../store/dashboard.actions';
 // Components
@@ -18,6 +17,7 @@ const DashboardContainer = styled.div`
   flex-wrap: wrap;
   justify-content: flex-start;
   padding-top: 10px;
+  width: 80%;
 `;
 
 const ProgressBarContainer = styled.div`
@@ -42,7 +42,6 @@ const Dashboard = ({ state, fetchData }: Props): any => {
       <DashboardContainer>
         <Profile userAccount={userAccount} />
         <Account userAccount={userAccount} />
-        <Divider />
         <Transactions withdrawals={withdrawals} />
         <Advances advances={advances} />
       </DashboardContainer>

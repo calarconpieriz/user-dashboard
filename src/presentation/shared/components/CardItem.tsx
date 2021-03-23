@@ -8,7 +8,7 @@ const useStyles = makeStyles({
   root: {
     position: 'relative',
     minWidth: '300px',
-    minHeight: '210px',
+    minHeight: '265px',
     margin: '0 10px',
   },
   name: {

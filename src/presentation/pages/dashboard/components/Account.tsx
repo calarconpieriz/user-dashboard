@@ -16,13 +16,17 @@ const Actions = styled.div`
   right: 3%;
 `;
 
+const AccountWrapper = styled.div`
+  width: 50%;
+`;
+
 interface Props {
   userAccount: UserAccountStructure;
 }
 
 const Account = ({ userAccount }: Props) => {
   return (
-    <div className="account">
+    <AccountWrapper>
       <CardItem>
         <Typography color="textSecondary" gutterBottom>
           Main account
@@ -51,7 +55,7 @@ const Account = ({ userAccount }: Props) => {
           ${userAccount.bank?.balance}
         </Typography>
       </CardItem>
-    </div>
+    </AccountWrapper>
   );
 };
 
